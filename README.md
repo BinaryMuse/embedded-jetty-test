@@ -19,6 +19,12 @@ Notice that the State object needs to be thread safe!
 is given a directory to use as its "base" directory, as well as a few other
 options (including a list of files to use as "welcome files").
 
+## Serving a webapp in war form
+
+`EmbJetTest.java` also sets up a `WebAppContext` to serve up a web application
+packaged in a war on a subdirectory (in this case `webapp`). I used a GWT
+application as a test.
+
 ## Catching unhandled URIs
 
 By using a `FourOhFourHandler` as the last item in the `HandlerList` for the

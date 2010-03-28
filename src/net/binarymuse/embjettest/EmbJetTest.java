@@ -10,6 +10,7 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
+import org.eclipse.jetty.webapp.WebAppContext;
 
 public class EmbJetTest {
 
@@ -29,10 +30,16 @@ public class EmbJetTest {
         resource.setWelcomeFiles(new String[] {"index.htm"});
         resource.setResourceBase("./htdocs");
         
+        // war handler
+        WebAppContext waContext = new WebAppContext();
+        waContext.setContextPath("/webapp");
+        waContext.setWar("./apps/DefaultApp.war");
+        
         // Make it a list
         HandlerList handlers = new HandlerList();
         handlers.addHandler(context);
         handlers.addHandler(resource);
+        handlers.addHandler(waContext);
         handlers.addHandler(new FourOhFourHander()); // give 404's for anything not handled yet
         
         // Add it to the server
