@@ -19,7 +19,7 @@ Notice that the State object needs to be thread safe!
 is given a directory to use as its "base" directory, as well as a few other
 options (including a list of files to use as "welcome files").
 
-## Catching uhhandled URIs
+## Catching unhandled URIs
 
 By using a `FourOhFourHandler` as the last item in the `HandlerList` for the
 server, we can effectively catch any URI that was not handled already and
