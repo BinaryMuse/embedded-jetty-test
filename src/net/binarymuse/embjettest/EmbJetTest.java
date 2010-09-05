@@ -17,7 +17,11 @@ public class EmbJetTest {
     public static Server server;
 
     public static void main(String[] args) throws Throwable {
-        EmbJetTest.server = new Server(8080);
+        int port = 8080;
+        if(args.length == 1) {
+            port = Integer.valueOf(args[0]);
+        }
+        EmbJetTest.server = new Server(port);
 
         // First our servlet handlers
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);

@@ -24,6 +24,7 @@ which version you download.
     * `cp jetty-distribution-7.1.6.v20100715/lib/*.jar lib/`
   - Run the project:
     * `ant`
+    * To start on a port other than 8080 (for example, 8765): `ant -Dport=8765`
 
 You should be able to visit [http://localhost:8080](http://localhost:8080) in
 your browser and view the working application. Quit the server by pressing
