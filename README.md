@@ -28,7 +28,9 @@ folder names depending on which version you download.
   - Run the project:
     * `ant`
 
-You should be able to visit [http://localhost:8080][3] in your browser
+You should be able to visit [http://localhost:8080][3] in your browser and
+view the working application. Quit the server by pressing `Ctrl+C` on the
+command line where you started the server.
 
   [1]: http://ant.apache.org/ "Apache Ant"
   [2]: http://download.eclipse.org/jetty/stable-7/dist/ "Jetty 7.x Stable Downloads"
