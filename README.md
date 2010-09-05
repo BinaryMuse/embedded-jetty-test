@@ -28,13 +28,13 @@ folder names depending on which version you download.
   - Run the project:
     * `ant`
 
-You should be able to visit [http://localhost:8080][3] in your browser and
-view the working application. Quit the server by pressing `Ctrl+C` on the
-command line where you started the server.
+You should be able to visit [http://localhost:8080](http://localhost:8080) in
+your browser and view the working application. Quit the server by pressing
+`Ctrl+C` on the command line where you started the server or by visiting
+[http://localhost:8080/servlets/shutdown](http://localhost:8080/servlets/shutdown)
 
   [1]: http://ant.apache.org/ "Apache Ant"
   [2]: http://download.eclipse.org/jetty/stable-7/dist/ "Jetty 7.x Stable Downloads"
-  [3]: http://localhost:8080 "localhost port 8080"
 
 ## Examples
 
@@ -45,6 +45,7 @@ of all URI's:
   * Managing servlets based on file patterns: `/servlets/session`
   * Serving a webapp in war form: `/webapp`
   * Catching unhandled URIs: any non-handled URI (e.g. `/fake-uri`)
+  * Serving servlet for shutting down the server: `/servlets/shutdown`
 
 Details on each follow:
 
@@ -75,3 +76,9 @@ application as a test.
 By using a `FourOhFourHandler` as the last item in the `HandlerList` for the
 server, we can effectively catch any URI that was not handled already and
 generate a 404 for it.
+
+### Serving servlet for shutting down the server
+
+By visiting `/servlets/shutdown`, the server can be shut down. This
+demonstrates the ability for servlets to interact with the main server
+object.
