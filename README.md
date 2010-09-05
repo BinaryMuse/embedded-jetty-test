@@ -5,13 +5,10 @@ within Java code.
 
 ## Installing and Running
 
-These instructions assume you have [Apache Ant][1] installed. They also assume
-that you begin the procedure in `~/src/`. Adjust the instructions for whatever
-path you decide to use.
-
-These instructions also download version 7.1.6.v20100715 of the Jetty
-distribution (on which the project depends). Please substitute the file and
-folder names depending on which version you download.
+These instructions assume you have [Apache Ant][1] installed. They also
+download version 7.1.6.v20100715 of the Jetty distribution (on which the
+project depends). Please substitute the file and folder names depending on
+which version you download.
 
   - Clone the repository and enter the directory:
     * `git clone git://github.com/BinaryMuse/embedded-jetty-test.git`
